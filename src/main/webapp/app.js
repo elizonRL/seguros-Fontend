@@ -1,4 +1,5 @@
 
+
 const poliza = document.getElementById("poliza");
 const form = document.getElementById("form");
 const button = document.getElementById("btn-enviar");
@@ -6,13 +7,15 @@ const errorElement = document.getElementById("Poliza-error");
 const cardElement = document.getElementById("card");
 
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (poliza.value === "" || poliza.value.length < 3) {
         errorElement.innerHTML = `<p style="color:red;"> Verifica Tu poliza de seguros </p>`;
         return false;
     }
-    console.log(poliza.value)
+    const request = await fetch(`http://localhost:8081/poliza?num_poliza=123456`);
+    const datos = await request.json();
+    console.log(poliza.value, datos); // {num_poliza: 123456, nombre: "Juan", apellido: "Perez"}
     errorElement.innerHTML = `<p style="color:green;"> Datos correctos</p>`;
     data(poliza.value, card);
     return true;
