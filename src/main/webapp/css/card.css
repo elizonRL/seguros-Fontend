@@ -1,0 +1,150 @@
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.border {
+    border: 1px solid #ccc;
+}
+
+.bg-card {
+    background-color: #f5f8fa;
+}
+
+.text-card-foreground {
+    color: #333;
+}
+
+.shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Structure */
+
+.card {
+    width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.card .flex {
+    display: flex;
+}
+
+.card .flex-col {
+    flex-direction: column;
+}
+
+.card .space {
+    space-y: 1.5rem;
+}
+
+/* Card Header */
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Policy Holder Information */
+
+.card .policy-holder {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card .policy-holder img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card .policy-holder .name {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card .policy-holder .policy-number {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Coverage Details */
+
+.card .coverage-details {
+    margin-top: 1rem;
+}
+
+.card .coverage-details h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card .coverage-details .coverage-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: #f0f0f0;
+    margin-bottom: 0.5rem;
+}
+
+.card .coverage-details .coverage-item svg {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+/* Contact Information */
+
+.card .contact-information {
+    margin-top: 1rem;
+}
+
+.card .contact-information h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card .contact-information p {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+
+.card .contact-information a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card .contact-information a:hover {
+    text-decoration: underline;
+}
+
+/* Edit Policy Details Button */
+
+.card .edit-policy-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.card .edit-policy-button button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.card .edit-policy-button button:hover {
+    background-color: #eee;
+}

@@ -86,6 +86,20 @@ form button{
     cursor: pointer;
 
 }
+.respuesta{
+    grid-column: 2/3;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    min-height: 200px;
+    border-radius: 5px;
+    border: solid 1px #000000;
+}
+.respuesta h2{
+    margin: 20px 0;
+    justify-content: center;
+}
 
 @media screen and (min-width:  768px) {
     body{
@@ -105,4 +119,14 @@ form button{
     main .formulario{
         grid-column: 1/4;
     }
+}
+.card{
+    background-color: #ffffff;
+    min-height: 200px;
+
+
+}
+.card-body{
+    padding: 20px;
+
 }
