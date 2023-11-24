@@ -130,3 +130,40 @@ form button{
     padding: 20px;
 
 }
+
+/*card de informacion del seguro */
+.containerCard {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.headerCard {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contentCard {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.tableCard {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableCard td,
+.tableCard th {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.tableCard th {
+    background-color: #ccc;
+}

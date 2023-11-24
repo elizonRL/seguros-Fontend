@@ -13,9 +13,9 @@ form.addEventListener("submit", async (e) => {
         errorElement.innerHTML = `<p style="color:red;"> Verifica Tu poliza de seguros </p>`;
         return false;
     }
-    const request = await fetch(`http://localhost:8081/poliza?num_poliza=123456`);
-    const datos = await request.json();
-    console.log(poliza.value, datos); // {num_poliza: 123456, nombre: "Juan", apellido: "Perez"}
+    /*const request = await fetch(`http://localhost:8081/poliza?num_poliza=123456`);
+    const datos = await request.json();*/
+    console.log(poliza.value); // {num_poliza: 123456, nombre: "Juan", apellido: "Perez"}
     errorElement.innerHTML = `<p style="color:green;"> Datos correctos</p>`;
     data(poliza.value, card);
     return true;
@@ -37,10 +37,38 @@ function validarPoliza() {
 
 const data = (poliza, card) => {
     cardElement.innerHTML =
-        `<div class="card" style="width: 18rem;">
-            <div class="card-body"> 
-                <h5 class="card-title">Poliza</h5> 
-                <p class="card-text"> ${poliza} </p> 
-            </div> 
-        </div>`;
+        ` <div class="containerCadr">
+            <div class="headerCard">
+                <h1 class="title">Información de seguro</h1>
+            </div>
+            <div class="contentCard">
+                <table class="tableCard">
+                    <tr>
+                        <th>Póliza</th>
+                        <td>AUTO12345678</td>
+                    </tr>
+                    <tr>
+                        <th>Nombre</th>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <th>Número de vehículos</th>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th>Modelo</th>
+                        <td>Toyota Camry</td>
+                    </tr>
+                    <tr>
+                        <th>Fecha de Inicio</th>
+                        <td>10-10-2023</td>
+                    </tr>
+                    <tr>
+                        <th>Fecha de Finalización</th>
+                        <td>10-10-2024</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>`;
 }
