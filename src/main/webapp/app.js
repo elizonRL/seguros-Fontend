@@ -19,9 +19,7 @@ form.addEventListener("submit", async (e) => {
         poliza.value ="";
         return false;
     }
-    console.log(datos)
     dataProsesada(datos);
-    console.log(poliza.value); // {num_poliza: 123456, nombre: "Juan", apellido: "Perez"}
     errorElement.innerHTML = `<p style="color:green;"> Datos correctos</p>`;
     data(poliza.value);
     poliza.value="";
@@ -33,6 +31,7 @@ form.addEventListener("submit", async (e) => {
 
 const dataProsesada= (datos)=>{
     datos.forEach((element)=>{
+      num_poliza = element["num_poliza"]
       fech_ini = element["fecha_inicio"]
       fech_fin = element["fecha_fin"];
       cliente = element["cliente"]
@@ -49,7 +48,6 @@ function validarPoliza() {
         errorElement.innerHTML = `<p style="color:red;"> Datos incorrectos</p>`;
         return false;
     }
-    console.log(poliza)
     return true;
 }
 
@@ -65,7 +63,7 @@ const data = (poliza) => {
                 <table class="tableCard">
                     <tr>
                         <th>Póliza</th>
-                        <td>${poliza}</td>
+                        <td>${num_poliza}</td>
                     </tr>
                     <tr>
                         <th>Tipo de Poliza</th>
