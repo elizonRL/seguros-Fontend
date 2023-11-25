@@ -13,8 +13,8 @@ form.addEventListener("submit", async (e) => {
         errorElement.innerHTML = `<p style="color:red;"> Verifica Tu poliza de seguros </p>`;
         return false;
     }
-    /*const request = await fetch(`http://localhost:8081/poliza?num_poliza=123456`);
-    const datos = await request.json();*/
+    const request = await fetch(`http://localhost:8081/poliza?num_poliza=123456`);
+    const datos = await request.json();
     console.log(poliza.value); // {num_poliza: 123456, nombre: "Juan", apellido: "Perez"}
     errorElement.innerHTML = `<p style="color:green;"> Datos correctos</p>`;
     data(poliza.value, card);
